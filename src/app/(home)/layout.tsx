@@ -3,6 +3,7 @@ import "../globals.css";
 
 import Header from "@/components/genui/Header";
 import Footer from "@/components/genui/Footer";
+import BubbleBackground from "@/components/genui/BubbleBackground";
 
 export const metadata: Metadata = {
   title: "Supafast AI",
@@ -17,9 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` antialiased`}>
-        <Header />
-        {children}
-        <Footer />
+        <BubbleBackground />
+        <div className="relative z-10">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

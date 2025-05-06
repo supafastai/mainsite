@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,13 +13,16 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { Menu, X } from "lucide-react";
 
 import NavlistItem from "./NavlistItem";
 
 function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <nav className="flex justify-between items-center p-4">
-      <Link href="/" className="text-2xl font-bold">
+    <nav className="flex justify-between items-center p-4 relative">
+      <Link href="/" className="text-2xl font-bold z-10">
         <Image
           src="/logos/SupaFast-Full-Logo.png"
           alt="logo"
@@ -27,7 +32,14 @@ function Header() {
         />
       </Link>
 
-      <div className="flex items-center gap-4">
+      <button
+        className="md:hidden z-10"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+      >
+        {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      <div className="hidden md:flex items-center gap-4">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -56,7 +68,36 @@ function Header() {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <Button>Join Waitlist</Button>
+
+      <Button className="hidden md:block">Join Waitlist</Button>
+
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 bg-white z-[5] md:hidden flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center space-y-6 text-lg">
+            <Link href="/tools/ads" onClick={() => setMobileMenuOpen(false)}>
+              Ads
+            </Link>
+            <Link href="/tools/email" onClick={() => setMobileMenuOpen(false)}>
+              Email
+            </Link>
+            <Link
+              href="/tools/websites"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Websites
+            </Link>
+            <Link href="/roadmap" onClick={() => setMobileMenuOpen(false)}>
+              Roadmap
+            </Link>
+            <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>
+              FAQ
+            </Link>
+            <Button onClick={() => setMobileMenuOpen(false)}>
+              Join Waitlist
+            </Button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
