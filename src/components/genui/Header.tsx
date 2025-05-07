@@ -21,7 +21,7 @@ function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="flex bg-white/70 backdrop-blur-sm justify-between items-center p-4 relative">
+    <nav className="flex sticky top-0 z-50 bg-white/70 backdrop-blur-sm justify-between items-center p-4 ">
       <Link href="/" className="text-2xl font-bold z-10">
         <Image
           src="/logos/SupaFast-Full-Logo.png"
@@ -46,7 +46,7 @@ function Header() {
               <NavigationMenuTrigger className="bg-transparent hover:bg-secondary/10 hover:text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300 data-[state=open]:bg-gray-100/10 data-[state=open]:text-black data-[state=open]:scale-[1.02] data-[state=open]:shadow-sm">
                 Tools
               </NavigationMenuTrigger>
-              <NavigationMenuContent>
+              <NavigationMenuContent className="z-[100] bg-white/90 backdrop-blur-sm">
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] ">
                   <NavlistItem href="/tools/ads" title="Ads">
                     Monitor and analyse competitor ads & campaigns
