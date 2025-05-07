@@ -10,7 +10,7 @@ import Faq from "@/components/homeblocks/Faq";
 export default function Home() {
   return (
     <div>
-      <div className="flex flex-col md:flex-row bg-white/90 p-4 md:p-8 items-center justify-between rounded-4xl w-full h-full gap-10 group">
+      <div className=" z-0 flex flex-col md:flex-row bg-white/90 backdrop-blur-sm  p-4 md:p-8 items-center justify-between rounded-4xl w-full h-full gap-10 group">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}

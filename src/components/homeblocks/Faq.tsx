@@ -36,7 +36,7 @@ const Faq = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
-      className="py-20 bg-gradient-to-b from-background to-background/80"
+      className="py-20 bg-gradient-to-b from-background to-background/80 backdrop-blur-sm "
     >
       <div className="container mx-auto px-4">
         <motion.h2

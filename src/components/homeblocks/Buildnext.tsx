@@ -42,7 +42,7 @@ function Buildnext() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="flex flex-col gap-4 w-full bg-white/90 p-4 md:p-8 items-start justify-between rounded-4xl my-6"
+      className="flex flex-col gap-4 w-full bg-white/90 backdrop-blur-sm p-4 md:p-8 items-start justify-between rounded-4xl my-6"
     >
       <div className="flex items-center gap-2 relative">
         <FaLightbulb className="stroke-secondary text-2xl" />
