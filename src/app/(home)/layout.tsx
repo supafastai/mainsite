@@ -21,7 +21,9 @@ export default function RootLayout({
         <BubbleBackground />
         <div className="relative z-10">
           <Header />
-          {children}
+          <main className="flex flex-col items-center justify-center min-h-screen w-full px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 space-y-8 sm:space-y-12">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

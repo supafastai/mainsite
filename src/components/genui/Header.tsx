@@ -21,7 +21,7 @@ function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center p-4 relative">
+    <nav className="flex bg-white/70 backdrop-blur-sm justify-between items-center p-4 relative">
       <Link href="/" className="text-2xl font-bold z-10">
         <Image
           src="/logos/SupaFast-Full-Logo.png"
@@ -43,9 +43,11 @@ function Header() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Tools</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="bg-transparent hover:bg-secondary/10 hover:text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300 data-[state=open]:bg-gray-100/10 data-[state=open]:text-black data-[state=open]:scale-[1.02] data-[state=open]:shadow-sm">
+                Tools
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] ">
                   <NavlistItem href="/tools/ads" title="Ads">
                     Monitor and analyse competitor ads & campaigns
                   </NavlistItem>
@@ -60,10 +62,20 @@ function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuLink href="/roadmap">Roadmap</NavigationMenuLink>
+              <NavigationMenuLink
+                className=" hover:bg-primary/10 hover:text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300"
+                href="/roadmap"
+              >
+                Roadmap
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink href="/faq">FAQ</NavigationMenuLink>
+              <NavigationMenuLink
+                className=" hover:bg-accent/10 hover:text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300"
+                href="#faq"
+              >
+                FAQ
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
@@ -72,27 +84,51 @@ function Header() {
       <Button className="hidden md:block">Join Waitlist</Button>
 
       {mobileMenuOpen && (
-        <div className="fixed inset-0 bg-white z-[5] md:hidden flex flex-col items-center justify-center">
+        <div className="fixed top-0 left-0 w-screen h-screen bg-white/85 backdrop-blur-sm z-[100] md:hidden flex flex-col items-center justify-center">
           <div className="flex flex-col items-center space-y-6 text-lg">
-            <Link href="/tools/ads" onClick={() => setMobileMenuOpen(false)}>
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="absolute top-6 right-6 p-2 hover:bg-gray-100 rounded-full transition-colors"
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            <Link
+              href="/tools/ads"
+              onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-primary transition-colors"
+            >
               Ads
             </Link>
-            <Link href="/tools/email" onClick={() => setMobileMenuOpen(false)}>
+            <Link
+              href="/tools/email"
+              onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-primary transition-colors"
+            >
               Email
             </Link>
             <Link
               href="/tools/websites"
               onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-primary transition-colors"
             >
               Websites
             </Link>
-            <Link href="/roadmap" onClick={() => setMobileMenuOpen(false)}>
+            <Link
+              href="/roadmap"
+              onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-primary transition-colors"
+            >
               Roadmap
             </Link>
-            <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>
+            <Link
+              href="#faq"
+              onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-primary transition-colors"
+            >
               FAQ
             </Link>
-            <Button onClick={() => setMobileMenuOpen(false)}>
+            <Button onClick={() => setMobileMenuOpen(false)} className="mt-4">
               Join Waitlist
             </Button>
           </div>
