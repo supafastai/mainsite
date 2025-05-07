@@ -42,7 +42,7 @@ function Coming() {
             title: "SupaFast Email",
             description:
               "Competitor emails land. You get instant breakdowns to act on",
-            color: "primary",
+            color: "border-primary text-primary",
             href: "/tools/emails",
             features: [
               "Real-time email campaign monitoring",
@@ -55,7 +55,7 @@ function Coming() {
             title: "SupaFast Ads",
             description:
               "Their ads go live. You see them — what, where, and how often.",
-            color: "ring",
+            color: "border-blue-500 text-blue-500",
             href: "/tools/ads",
             features: [
               "Real-time ad campaign monitoring",
@@ -68,7 +68,7 @@ function Coming() {
             title: "SupaFast Insite",
             description:
               "Their website updates. You spot it — price shifts, new products, and more.",
-            color: "secondary",
+            color: "border-secondary text-secondary",
             href: "/tools/websites",
             features: [
               "Real-time ad campaign monitoring",
@@ -90,7 +90,7 @@ function Coming() {
             className="w-full md:w-1/3"
           >
             <Card
-              className={`border-t-4 border-t-${card.color} flex flex-col justify-between hover:shadow-lg transition-shadow duration-200 h-full`}
+              className={`border-t-4 ${card.color} flex flex-col justify-between hover:shadow-lg transition-shadow duration-200 h-full bg-white`}
             >
               <CardHeader>
                 <CardTitle className="text-2xl font-bold">
@@ -101,9 +101,7 @@ function Coming() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul
-                  className={`list-[disc] list-inside space-y-2 marker:text-${card.color}`}
-                >
+                <ul className="list-[disc] list-inside space-y-2 text-black [&>li]:marker:text-current">
                   {card.features.map((feature, i) => (
                     <motion.li
                       key={i}
@@ -123,9 +121,11 @@ function Coming() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Button
-                      className={`w-fit text-${card.color} bg-transparent border-${card.color} border-2 hover:bg-${card.color} hover:text-white`}
+                      className={`w-fit ${card.color} group bg-white border-2 hover:bg-current `}
                     >
-                      Get {card.title}
+                      <span className=" group-hover:text-white">
+                        Get {card.title}
+                      </span>
                     </Button>
                   </motion.div>
                 </Link>
