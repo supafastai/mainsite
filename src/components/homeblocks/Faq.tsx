@@ -15,7 +15,7 @@ const faqItems: FaqItem[] = [
   {
     question: "When is SupaFast launching?",
     answer:
-      "Soon → and when we say soon, we mean soon. Join the waitlist and you&apos;ll be first to skip the queue when it drops",
+      "We&apos;re almost live. SupaFast is currently onboarding early access users — sign up to skip the queue and move faster than competitors waiting on the sidelines",
   },
   {
     question: "How much will SupaFast cost?",

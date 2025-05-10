@@ -46,9 +46,12 @@ function Buildnext() {
     >
       <div className="flex items-center gap-2 relative">
         <FaLightbulb className="stroke-secondary text-2xl" />
-        <h2 className="text-3xl font-bold">What should we build next?</h2>
+        <h2 className="text-3xl font-bold">Next up? You tell us.</h2>
         <div className="absolute -bottom-2 left-0 w-[30%] h-[2px] bg-red-500"></div>
       </div>
+      <p className="text-gray-800">
+        We&apos;re moving fast — and you get to help shape what comes next.
+      </p>
 
       {/* Suggestion Form */}
       <form onSubmit={handleSubmit} className="w-full mb-8">

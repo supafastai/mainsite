@@ -25,7 +25,7 @@ function Coming() {
         transition={{ delay: 0.2 }}
         className="text-3xl font-bold"
       >
-        What&apos;s Coming
+        Here&apos;s What You Get 
       </motion.h2>
       <motion.p
         initial={{ opacity: 0, x: -20 }}
