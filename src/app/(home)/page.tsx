@@ -21,7 +21,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-3xl md:text-4xl lg:text-8xl font-bold leading-tight"
+            className="text-4xl md:text-5xl lg:text-9xl font-bold leading-tight"
           >
             Your Competitors Are Moving Fast. <br />
             You? You&apos;re moving SupaFast
@@ -30,7 +30,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-base md:text-lg text-gray-700"
+            className="text-lg md:text-xl text-gray-700"
           >
             SupaFast puts competitor strategies right where they belong — in
             your hands.
