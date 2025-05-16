@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import Coming from "@/components/homeblocks/Coming";
 import Buildnext from "@/components/homeblocks/Buildnext";
 import Faq from "@/components/homeblocks/Faq";
-
+import Zero from "@/components/homeblocks/Zero";
 export default function Home() {
   return (
     <div>
@@ -71,8 +71,9 @@ export default function Home() {
         </motion.div>
       </div>{" "}
       <Coming />
-      <Buildnext />
+      <Zero />
       <Faq />
+      <Buildnext />
     </div>
   );
 }
