@@ -6,30 +6,30 @@ import {
 } from "@/components/ui/accordion";
 import { motion } from "motion/react";
 
-interface FaqItem {
-  question: string;
-  answer: string;
+interface DomainInsight {
+  title: string;
+  insight: string;
 }
 
-const faqItems: FaqItem[] = [
+const domainInsights: DomainInsight[] = [
   {
-    question: "When is SupaFast launching?",
-    answer:
-      "Soon → and when we say soon, we mean soon. Join the waitlist and you&apos;ll be first to skip the queue when it drops",
+    title: "The Future of Fast Development",
+    insight:
+      "Traditional development cycles are slow and expensive. SupaFast is revolutionizing this space by enabling rapid prototyping and deployment, helping teams move from idea to production in days, not months.",
   },
   {
-    question: "How much will SupaFast cost?",
-    answer:
-      "Early access → free trial. Pricing → coming soon (but trust us, it'll be worth it).",
+    title: "Why Speed Matters",
+    insight:
+      "In today's competitive landscape, development speed directly impacts market success. Teams using SupaFast can iterate faster, respond to market changes quicker, and maintain a significant competitive advantage.",
   },
   {
-    question: "How do I get started?",
-    answer:
-      'Simple. Hit "Get me in early," join the waitlist, and we\'ll handle the rest',
+    title: "The Power of Early Access",
+    insight:
+      "Early adopters of SupaFast gain exclusive access to cutting-edge features, direct influence on product development, and the opportunity to shape the future of rapid development tools.",
   },
 ];
 
-const Faq = () => {
+const DomainAwareness = () => {
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -46,12 +46,12 @@ const Faq = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-4xl font-bold text-center mb-12 text-foreground"
         >
-          Frequently Asked Questions
+          Understanding the Landscape
         </motion.h2>
 
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
-            {faqItems.map((item, index) => (
+            {domainInsights.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -65,12 +65,12 @@ const Faq = () => {
                 >
                   <AccordionTrigger className="text-lg font-medium hover:no-underline group">
                     <div className="flex flex-col w-full">
-                      <span>{item.question}</span>
+                      <span>{item.title}</span>
                       <div className="h-0.5 w-0 bg-gradient-to-r from-[--imperial-red-primary] via-[--ut-orange-primary] to-[--triadic-blue] transition-all duration-300 group-hover:w-full group-data-[state=open]:w-full" />
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
-                    {item.answer}
+                    {item.insight}
                   </AccordionContent>
                 </AccordionItem>
               </motion.div>
@@ -82,4 +82,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default DomainAwareness;

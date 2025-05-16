@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import Coming from "@/components/homeblocks/Coming";
 import Buildnext from "@/components/homeblocks/Buildnext";
 import Faq from "@/components/homeblocks/Faq";
-
+import Zero from "@/components/homeblocks/Zero";
 export default function Home() {
   return (
     <div>
@@ -21,18 +21,22 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
           >
-            Your Unfair Advantage
+            Your Competitors Are Moving Fast. <br />
+            You? You&apos;re moving SupaFast
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-base md:text-lg text-gray-700"
+            className="text-lg md:text-xl text-gray-700"
           >
-            AI-powered competitor insights to help you make better decisions.
+            SupaFast puts competitor strategies right where they belong — in
+            your hands.
             <br className="hidden md:block" />
+            <i>Built by marketers + engineers behind $13M+ in ad spend</i>
+            <br />
             Join our waitlist to get
             <span className="relative cursor-pointer ">
               {" "}
@@ -67,8 +71,9 @@ export default function Home() {
         </motion.div>
       </div>{" "}
       <Coming />
-      <Buildnext />
+      <Zero />
       <Faq />
+      <Buildnext />
     </div>
   );
 }

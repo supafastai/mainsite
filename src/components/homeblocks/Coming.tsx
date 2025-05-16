@@ -25,7 +25,7 @@ function Coming() {
         transition={{ delay: 0.2 }}
         className="text-3xl font-bold"
       >
-        What&apos;s Coming
+        Stop Playing Catch-Up
       </motion.h2>
       <motion.p
         initial={{ opacity: 0, x: -20 }}
@@ -33,49 +33,52 @@ function Coming() {
         transition={{ delay: 0.3 }}
         className="text-lg"
       >
-        We&apos;re working on these tools right now. Check back soon for
-        updates!
+        Don&apos;t let competitors outmaneuver you. Get real-time insights and
+        stay ahead of the game.
       </motion.p>
       <div className="flex flex-col md:flex-row w-full justify-between gap-4">
         {[
           {
             title: "SupaFast Email",
-            description:
-              "Competitor emails land. You get instant breakdowns to act on",
+            description: "Never miss a competitor's email campaign again",
             color: "border-primary text-primary",
             href: "/tools/emails",
-            features: [
-              "Real-time email campaign monitoring",
-              "AI-powered content analysis",
-              "Subject line and offer tracking",
-              "Engagement metrics insights",
+            painPoints: [
+              "Tired of discovering competitor campaigns too late?",
+              "Struggling to keep up with their messaging?",
+              "Missing out on their best performing offers?",
+              "Wasting time manually tracking their emails?",
             ],
+            solution:
+              "Get instant alerts and AI-powered analysis of every competitor email, so you can respond before your customers do.",
           },
           {
             title: "SupaFast Ads",
-            description:
-              "Their ads go live. You see them — what, where, and how often.",
+            description: "See their ads before your customers do",
             color: "border-blue-500 text-blue-500",
             href: "/tools/ads",
-            features: [
-              "Real-time ad campaign monitoring",
-              "AI-powered content analysis",
-              "Subject line and offer tracking",
-              "Engagement metrics insights",
+            painPoints: [
+              "Competitors running ads you don't know about?",
+              "Missing their targeting strategies?",
+              "Can't keep up with their ad spend?",
+              "Losing customers to their promotions?",
             ],
+            solution:
+              "Monitor their ad campaigns in real-time, understand their strategy, and respond before they steal your market share.",
           },
           {
             title: "SupaFast Insite",
-            description:
-              "Their website updates. You spot it — price shifts, new products, and more.",
+            description: "Never miss a website change again",
             color: "border-secondary text-secondary",
             href: "/tools/websites",
-            features: [
-              "Real-time ad campaign monitoring",
-              "AI-powered content analysis",
-              "Subject line and offer tracking",
-              "Engagement metrics insights",
+            painPoints: [
+              "Competitors changing prices without you knowing?",
+              "Missing their new product launches?",
+              "Can't track their content updates?",
+              "Losing sales to their website changes?",
             ],
+            solution:
+              "Get instant notifications of every website change, from price updates to new products, so you can stay competitive.",
           },
         ].map((card, index) => (
           <motion.div
@@ -101,18 +104,24 @@ function Coming() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="list-[disc] list-inside space-y-2 text-black [&>li]:marker:text-current">
-                  {card.features.map((feature, i) => (
-                    <motion.li
-                      key={i}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.6 + index * 0.1 + i * 0.1 }}
-                    >
-                      {feature}
-                    </motion.li>
-                  ))}
-                </ul>
+                <div className="space-y-4">
+                  <ul className="list-[disc] list-inside space-y-2 text-black [&>li]:marker:text-current">
+                    {card.painPoints.map((point, i) => (
+                      <motion.li
+                        key={i}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.6 + index * 0.1 + i * 0.1 }}
+                        className="text-gray-600"
+                      >
+                        {point}
+                      </motion.li>
+                    ))}
+                  </ul>
+                  <p className="text-sm font-medium text-gray-800 mt-4">
+                    {card.solution}
+                  </p>
+                </div>
               </CardContent>
               <CardFooter>
                 <Link href={card.href}>
@@ -121,9 +130,9 @@ function Coming() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Button
-                      className={`w-fit ${card.color} group bg-white border-2 hover:bg-current `}
+                      className={`w-fit ${card.color} group bg-white border-2 hover:bg-current`}
                     >
-                      <span className=" group-hover:text-white">
+                      <span className="group-hover:text-white">
                         Get {card.title}
                       </span>
                     </Button>

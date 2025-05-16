@@ -2,38 +2,38 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { FaThumbsUp, FaLightbulb } from "react-icons/fa";
 
-interface Suggestion {
+interface BusinessPriority {
   id: number;
   text: string;
   votes: number;
   timestamp: Date;
 }
 
-function Buildnext() {
-  const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
-  const [newSuggestion, setNewSuggestion] = useState("");
+function BusinessPriorities() {
+  const [priorities, setPriorities] = useState<BusinessPriority[]>([]);
+  const [newPriority, setNewPriority] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!newSuggestion.trim()) return;
+    if (!newPriority.trim()) return;
 
-    const suggestion: Suggestion = {
+    const priority: BusinessPriority = {
       id: Date.now(),
-      text: newSuggestion.trim(),
+      text: newPriority.trim(),
       votes: 0,
       timestamp: new Date(),
     };
 
-    setSuggestions([...suggestions, suggestion]);
-    setNewSuggestion("");
+    setPriorities([...priorities, priority]);
+    setNewPriority("");
   };
 
   const handleVote = (id: number) => {
-    setSuggestions(
-      suggestions.map((suggestion) =>
-        suggestion.id === id
-          ? { ...suggestion, votes: suggestion.votes + 1 }
-          : suggestion
+    setPriorities(
+      priorities.map((priority) =>
+        priority.id === id
+          ? { ...priority, votes: priority.votes + 1 }
+          : priority
       )
     );
   };
@@ -46,18 +46,24 @@ function Buildnext() {
     >
       <div className="flex items-center gap-2 relative">
         <FaLightbulb className="stroke-secondary text-2xl" />
-        <h2 className="text-3xl font-bold">What should we build next?</h2>
+        <h2 className="text-3xl font-bold">
+          What matters most to your business right now?
+        </h2>
         <div className="absolute -bottom-2 left-0 w-[30%] h-[2px] bg-red-500"></div>
       </div>
+      <p className="text-gray-800">
+        Your priorities, your playbook. Tell us what moves matter most — and
+        we&apos;ll put them at your fingertips.
+      </p>
 
-      {/* Suggestion Form */}
+      {/* Priority Form */}
       <form onSubmit={handleSubmit} className="w-full mb-8">
         <div className="flex gap-2">
           <input
             type="text"
-            value={newSuggestion}
-            onChange={(e) => setNewSuggestion(e.target.value)}
-            placeholder="Share your idea..."
+            value={newPriority}
+            onChange={(e) => setNewPriority(e.target.value)}
+            placeholder="Share your business priority..."
             className="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
           />
           <motion.button
@@ -66,19 +72,19 @@ function Buildnext() {
             type="submit"
             className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium"
           >
-            Submit
+            Add Priority
           </motion.button>
         </div>
       </form>
 
-      {/* Suggestions List */}
+      {/* Priorities List */}
       <div className="w-full space-y-4">
         <AnimatePresence>
-          {suggestions
+          {priorities
             .sort((a, b) => b.votes - a.votes)
-            .map((suggestion) => (
+            .map((priority) => (
               <motion.div
-                key={suggestion.id}
+                key={priority.id}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
@@ -86,19 +92,19 @@ function Buildnext() {
                 className="flex items-center justify-between p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow"
               >
                 <div className="flex-1">
-                  <p className="text-gray-800 font-medium">{suggestion.text}</p>
+                  <p className="text-gray-800 font-medium">{priority.text}</p>
                   <p className="text-sm text-gray-500">
-                    {suggestion.timestamp.toLocaleDateString()}
+                    {priority.timestamp.toLocaleDateString()}
                   </p>
                 </div>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  onClick={() => handleVote(suggestion.id)}
+                  onClick={() => handleVote(priority.id)}
                   className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
                 >
                   <FaThumbsUp className="text-blue-500" />
-                  <span className="font-medium">{suggestion.votes}</span>
+                  <span className="font-medium">{priority.votes}</span>
                 </motion.button>
               </motion.div>
             ))}
@@ -108,4 +114,4 @@ function Buildnext() {
   );
 }
 
-export default Buildnext;
+export default BusinessPriorities;
