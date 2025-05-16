@@ -66,9 +66,9 @@ function EmailProductPage() {
     { text: "Avoid repeating their boring, bloated promos" },
   ];
   return (
-    <div>
+    <div className="bg-white flex flex-col gap-10">
       <ProductHero data={heroData} />
-      <Features features={features} />;
+      <Features features={features} />
       <HowItWorks steps={steps} />
       <ClosingSection
         title="Make It Count"

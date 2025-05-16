@@ -39,7 +39,7 @@ function ClosingSection({
   };
 
   return (
-    <section className="py-20 px-4 md:px-8 bg-gradient-to-b from-gray-50 to-white">
+    <section className="">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

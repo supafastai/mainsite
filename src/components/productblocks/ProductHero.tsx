@@ -19,7 +19,7 @@ function ProductHero({ data }: ProductHeroProps) {
   const { headline, subheadline, ctaText, ctaLink } = data;
 
   return (
-    <section className="relative w-full min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-white to-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative w-full min-h-[80vh] flex items-center justify-center ">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

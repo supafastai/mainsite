@@ -9,7 +9,7 @@ import Faq from "@/components/homeblocks/Faq";
 import Zero from "@/components/homeblocks/Zero";
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <div className=" z-0 flex flex-col md:flex-row bg-white/90 backdrop-blur-sm  p-4 md:p-8 items-center justify-between rounded-4xl w-full h-full gap-10 group">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -35,11 +35,8 @@ export default function Home() {
             SupaFast puts competitor strategies right where they belong — in
             your hands.
             <br className="hidden md:block" />
-            <i>Built by marketers + engineers behind $13M+ in ad spend</i>
-            <br />
-            Join our waitlist to get
+            Join our waitlist to get{" "}
             <span className="relative cursor-pointer ">
-              {" "}
               early access
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
             </span>
@@ -49,9 +46,12 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <Button className="mt-2 hover:scale-105 transition-transform">
+            <Button className="mt-2 hover:scale-105 transition-transform text-2xl font-semibold px-10 py-8">
               Join waitlist
             </Button>
+            <p className="mt-4 text-gray-600 italic">
+              Built by marketers + engineers behind $13M+ in ad spend
+            </p>
           </motion.div>
         </motion.div>
         <motion.div
