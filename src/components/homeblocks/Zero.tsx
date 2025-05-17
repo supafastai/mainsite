@@ -55,7 +55,7 @@ function Zero() {
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: item.delay + 0.2 }}
-                      className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mb-4"
+                      className="w-12 h-12 rounded-full bg-white border-2 border-red-500 text-red-500 flex items-center justify-center text-xl font-bold mb-4"
                     >
                       {item.step}
                     </motion.div>

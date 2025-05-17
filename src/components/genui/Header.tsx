@@ -16,6 +16,7 @@ import {
 import { Menu, X } from "lucide-react";
 
 import NavlistItem from "./NavlistItem";
+import { FiTarget, FiMail, FiGlobe } from "react-icons/fi";
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -48,13 +49,25 @@ function Header() {
               </NavigationMenuTrigger>
               <NavigationMenuContent className="z-[100] bg-white/90 backdrop-blur-sm">
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] ">
-                  <NavlistItem href="/tools/ads" title="Ads">
+                  <NavlistItem
+                    href="/tools/ads"
+                    title="Ads"
+                    icon={<FiTarget className="w-4 h-4 text-blue-500" />}
+                  >
                     Monitor and analyse competitor ads & campaigns
                   </NavlistItem>
-                  <NavlistItem href="/tools/email" title="Email">
+                  <NavlistItem
+                    href="/tools/emails"
+                    title="Email"
+                    icon={<FiMail className="w-4 h-4 text-emerald-500" />}
+                  >
                     Track Competitor email campaigns & get instant insights
                   </NavlistItem>
-                  <NavlistItem href="/tools/websites" title="Websites">
+                  <NavlistItem
+                    href="/tools/websites"
+                    title="Websites"
+                    icon={<FiGlobe className="w-4 h-4 text-yellow-500" />}
+                  >
                     Monitor and analyse competitor websites
                   </NavlistItem>
                 </ul>

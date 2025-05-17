@@ -36,46 +36,52 @@ const DomainAwareness = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
-      className="py-20 bg-gradient-to-b from-background to-background/80 backdrop-blur-sm "
+      className="py-24 bg-gradient-to-b from-background to-background/80 backdrop-blur-sm"
     >
-      <div className="container mx-auto px-4">
+      <div className="container  px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-4xl font-bold text-center mb-12 text-foreground"
+          className="text-5xl font-bold text-center mb-16 text-foreground"
         >
           Understanding the Landscape
         </motion.h2>
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
-            {domainInsights.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-              >
-                <AccordionItem
-                  value={`item-${index}`}
-                  className="border border-border rounded-lg px-4 bg-background/50 backdrop-blur-sm hover:bg-accent/5 transition-colors"
+        <div className="max-w-7xl mx-auto">
+          <div className="">
+            <Accordion
+              type="single"
+              collapsible
+              className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6"
+            >
+              {domainInsights.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 >
-                  <AccordionTrigger className="text-lg font-medium hover:no-underline group">
-                    <div className="flex flex-col w-full">
-                      <span>{item.title}</span>
-                      <div className="h-0.5 w-0 bg-gradient-to-r from-[--imperial-red-primary] via-[--ut-orange-primary] to-[--triadic-blue] transition-all duration-300 group-hover:w-full group-data-[state=open]:w-full" />
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    {item.insight}
-                  </AccordionContent>
-                </AccordionItem>
-              </motion.div>
-            ))}
-          </Accordion>
+                  <AccordionItem
+                    value={`item-${index}`}
+                    className="border border-border rounded-xl px-6 py-2 bg-background/50 backdrop-blur-sm hover:bg-accent/5 transition-colors"
+                  >
+                    <AccordionTrigger className="text-xl font-semibold hover:no-underline group">
+                      <div className="flex flex-col w-full">
+                        <span>{item.title}</span>
+                        <div className="h-0.5 w-0 bg-gradient-to-r from-[--imperial-red-primary] via-[--ut-orange-primary] to-[--triadic-blue] transition-all duration-300 group-hover:w-full group-data-[state=open]:w-full" />
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="text-lg text-muted-foreground pt-2">
+                      {item.insight}
+                    </AccordionContent>
+                  </AccordionItem>
+                </motion.div>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </div>
     </motion.section>

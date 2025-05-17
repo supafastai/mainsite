@@ -36,7 +36,7 @@ function HowItWorks({ title = "How It Works", steps }: HowItWorksProps) {
   };
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-gradient-to-b from-white to-gray-50">
+    <section className="">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
