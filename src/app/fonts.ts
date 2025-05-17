@@ -1,9 +1,13 @@
 import localFont from "next/font/local";
 
 export const lufga = localFont({
+  variable: "--font-lufga",
+  // display: "swap",
+  // preload: true,
+  // fallback: ["system-ui", "arial"],
   src: [
     {
-      path: "./fonts/LufgaRegular.ttf",
+      path: "/fonts/LufgaRegular.ttf",
       weight: "400",
       style: "normal",
     },
