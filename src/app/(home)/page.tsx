@@ -49,7 +49,7 @@ export default function Home() {
             <Button className="mt-2 hover:scale-105 transition-transform text-2xl font-semibold px-10 py-8">
               Join waitlist
             </Button>
-            <p className="mt-4 text-gray-600 italic">
+            <p className="mt-4 font-lufga font-semibold text-gray-600 italic">
               Built by marketers + engineers behind $13M+ in ad spend
             </p>
           </motion.div>
