@@ -30,7 +30,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-700"
+            className="text-lg font-normal md:text-xl text-gray-700"
           >
             SupaFast puts competitor strategies right where they belong — in
             your hands.
@@ -49,7 +49,7 @@ export default function Home() {
             <Button className="mt-2 hover:scale-105 transition-transform text-2xl font-semibold px-10 py-8">
               Join waitlist
             </Button>
-            <p className="mt-4 text-gray-600 italic">
+            <p className="mt-4 font-lufga font-semibold text-gray-600 italic">
               Built by marketers + engineers behind $13M+ in ad spend
             </p>
           </motion.div>
