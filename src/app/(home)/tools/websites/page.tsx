@@ -3,37 +3,37 @@
 import React from "react";
 import ProductHero from "@/components/productblocks/ProductHero";
 import Features from "@/components/productblocks/Features";
-import { FiMail, FiCpu, FiBell } from "react-icons/fi"; // Feather icons
+import { FiFileText, FiTablet, FiGlobe } from "react-icons/fi"; // Feather icons
 import HowItWorks from "@/components/productblocks/HowItWorks";
 import ClosingSection from "@/components/productblocks/ClosingSection";
 
 function WebsiteProductPage() {
   const heroData = {
-    headline: "Stay Ahead of Every Campaign",
+    headline: "Uncover Messaging. Spot Intent.",
     subheadline:
-      "SupaFast Email monitors the competition's email marketing in real time. See what they're sending, when they're sending it, and why it matters — no guesswork, no cluttered inbox.",
-    ctaText: "Show Me The Emails",
+      "SupaFast Insite tracks how your competitors shift messaging, pricing, and offer strategy through their websites, so you know where they&apos;re headed before they announce it.",
+    ctaText: "Show Me Their In-Site",
     ctaLink: "/signup",
   };
 
   const features = [
     {
-      title: "Real-time Inbox Spying",
+      title: "Live Site Monitoring",
       description:
-        "See competitor emails the second they drop. No need to sign up yourself or check later.",
-      icon: <FiMail className="w-6 h-6" />, // or any other icon component
+        "Instant alerts when landing pages, pricing, or funnel structure changes. No more surprises.",
+      icon: <FiGlobe className="w-6 h-6" />,
     },
     {
-      title: "AI-Powered Content Dissection",
+      title: "Messaging & Offer Strategy",
       description:
-        "We break down their offers, CTAs, designs, hooks and timing. You get strategy, not noise.",
-      icon: <FiCpu className="w-6 h-6" />,
+        "See how they position products, frame urgency, and rewrite value props; headline to CTA.",
+      icon: <FiFileText className="w-6 h-6" />,
     },
     {
-      title: "Smart Alerts",
+      title: "Cross-Platform Clarity",
       description:
-        "Get pinged when competitors push discounts, launch products, or try sneaky moves",
-      icon: <FiBell className="w-6 h-6" />,
+        "No more guessing where they&apos;re spending. Get the full picture across channels in one view.",
+      icon: <FiTablet className="w-6 h-6" />,
     },
   ];
 

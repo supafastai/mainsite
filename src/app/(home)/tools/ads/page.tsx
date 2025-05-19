@@ -3,37 +3,37 @@
 import React from "react";
 import ProductHero from "@/components/productblocks/ProductHero";
 import Features from "@/components/productblocks/Features";
-import { FiMail, FiCpu, FiBell } from "react-icons/fi"; // Feather icons
+import { FiActivity, FiEdit, FiSearch } from "react-icons/fi"; // Feather icons
 import HowItWorks from "@/components/productblocks/HowItWorks";
 import ClosingSection from "@/components/productblocks/ClosingSection";
 
 function AdProductPage() {
   const heroData = {
-    headline: "Stay Ahead of Every Campaign",
+    headline: "Every Ad They Run. Every Move They Make Sent To Your Inbox",
     subheadline:
-      "SupaFast Email monitors the competition's email marketing in real time. See what they're sending, when they're sending it, and why it matters — no guesswork, no cluttered inbox.",
-    ctaText: "Show Me The Emails",
+      "SupaFast Ads gives you full visibility into your competitors' ad strategy. What they&apos;re running, where they&apos;re running it, and how often — all in real time.",
+    ctaText: "Show Me The Ads",
     ctaLink: "/signup",
   };
 
   const features = [
     {
-      title: "Real-time Inbox Spying",
+      title: "Real-time Ad Tracking",
       description:
-        "See competitor emails the second they drop. No need to sign up yourself or check later.",
-      icon: <FiMail className="w-6 h-6" />, // or any other icon component
+        "See every live campaign across Meta, Google, and more — the moment it launches.",
+      icon: <FiActivity className="w-6 h-6" />,
     },
     {
-      title: "AI-Powered Content Dissection",
+      title: "Creative Breakdown",
       description:
-        "We break down their offers, CTAs, designs, hooks and timing. You get strategy, not noise.",
-      icon: <FiCpu className="w-6 h-6" />,
+        "We dissect visuals, copy, targeting signals, and landing pages so you can learn what&apos;s working.",
+      icon: <FiEdit className="w-6 h-6" />,
     },
     {
-      title: "Smart Alerts",
+      title: "Cross-Platform Clarity",
       description:
-        "Get pinged when competitors push discounts, launch products, or try sneaky moves",
-      icon: <FiBell className="w-6 h-6" />,
+        "No more guessing where they&apos;re spending. Get the full picture across channels in one view.",
+      icon: <FiSearch className="w-6 h-6" />,
     },
   ];
 
@@ -42,28 +42,41 @@ function AdProductPage() {
       number: 1,
       title: "Tag Competitors",
       description:
-        "Add the brands you want to keep an eye on. Big, small, or sneaky.",
+        "Pick the brands you want to monitor — across any industry or region.",
     },
     {
       number: 2,
-      title: "We Break It Down",
+      title: "We Capture and Analyse",
       description:
-        "Subject lines, timing, call-to-actions — our AI slices it up.",
+        "Our system pulls ads, categorises them by platform, and breaks down the strategy.",
     },
     {
       number: 3,
-      title: "You Get The Edge",
-      description: "You see the moves. You adjust your playbook. You win.",
+      title: "You React Smarter",
+      description:
+        "Shift spend, rotate creative, or launch counter-offers—before performance slips.",
     },
   ];
 
   const bulletPoints = [
-    { text: "Spot discount trends before they hit your audience" },
-    { text: "Track when they launch, pause, or ramp up" },
-    { text: "Find high-performing subject lines to borrow (or beat)" },
-    { text: "Time your campaigns to land before theirs" },
-    { text: "Identify gaps in their messaging you can dominate" },
-    { text: "Avoid repeating their boring, bloated promos" },
+    {
+      text: "Catch budget ramps in real time — so you know when a competitor is scaling",
+    },
+    {
+      text: "Monitor creative fatigue cycles — and avoid launching with worn-out angles",
+    },
+    {
+      text: "Spot offer pivots — so you&apos;re not still pushing bundles when the space is back to single SKUs",
+    },
+    {
+      text: "Track spend velocity by platform — and shift your own mix accordingly",
+    },
+    {
+      text: "Time your launches to disrupt, not overlap — avoid high-CAC bidding wars",
+    },
+    {
+      text: "Reverse-engineer conversion objectives — acquisition vs. retargeting vs. retention",
+    },
   ];
   return (
     <div className="bg-white flex flex-col gap-10">
@@ -72,7 +85,7 @@ function AdProductPage() {
       <HowItWorks steps={steps} />
       <ClosingSection
         title="Make It Count"
-        subtitle="You've got the insight. What's your next move?"
+        subtitle="This isn't just intel. It's how you defend your ROAS—and beat competitors to profitable ground."
         bulletPoints={bulletPoints}
       />
     </div>
