@@ -8,8 +8,10 @@ import Buildnext from "@/components/homeblocks/Buildnext";
 import Faq from "@/components/homeblocks/Faq";
 import Zero from "@/components/homeblocks/Zero";
 import Perfect from "@/components/homeblocks/Perfect";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div className="">
       <div className="z-0 flex flex-col md:flex-row bg-white/90 backdrop-blur-sm p-4 md:p-8 items-center justify-between rounded-4xl w-full h-full gap-6 md:gap-10 group">
@@ -48,7 +50,10 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <Button className="mt-2 hover:scale-105 transition-transform text-lg sm:text-xl md:text-2xl font-semibold px-6 sm:px-8 md:px-10 py-6 md:py-8">
+            <Button
+              onClick={() => router.push("/signup")}
+              className="mt-2 hover:scale-105 transition-transform text-lg sm:text-xl md:text-2xl font-semibold px-6 sm:px-8 md:px-10 py-6 md:py-8"
+            >
               Join waitlist
             </Button>
             <p className="mt-4 text-sm sm:text-base font-lufga font-semibold text-gray-600 italic">
@@ -72,9 +77,9 @@ export default function Home() {
           />
         </motion.div>
       </div>{" "}
-      <Perfect />
       <Coming />
       <Zero />
+      <Perfect />
       <Faq />
       <Buildnext />
     </div>

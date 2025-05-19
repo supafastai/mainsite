@@ -18,6 +18,7 @@ const FEATURE_CARDS = [
     description: "Never miss a competitor's email campaign again",
     color: "border-primary text-primary",
     href: "/tools/emails",
+    stage: "active",
     painPoints: [
       "Tired of discovering competitor campaigns too late?",
       "Struggling to keep up with their messaging?",
@@ -32,6 +33,7 @@ const FEATURE_CARDS = [
     description: "See their ads before your customers do",
     color: "border-blue-500 text-blue-500",
     href: "/tools/ads",
+    stage: "active",
     painPoints: [
       "Competitors running ads you don't know about?",
       "Missing their targeting strategies?",
@@ -46,6 +48,7 @@ const FEATURE_CARDS = [
     description: "Never miss a website change again",
     color: "border-secondary text-secondary",
     href: "/tools/websites",
+    stage: "active",
     painPoints: [
       "Competitors changing prices without you knowing?",
       "Missing their new product launches?",
@@ -59,6 +62,8 @@ const FEATURE_CARDS = [
     title: "SupaFast Social",
     description: "Track your competitors' social moves in real-time",
     href: "/",
+    color: "border-ring text-ring",
+    stage: "coming-soon",
 
     painPoints: [
       "Struggling to keep up with your competitors' viral posts?",
@@ -73,7 +78,8 @@ const FEATURE_CARDS = [
     title: "SupaFast DataSense",
     description: "Understand what's really working in your business",
     href: "/",
-
+    color: "border-green-500 text-green-500",
+    stage: "coming-soon",
     painPoints: [
       "Drowning in metrics but can't find the story?",
       "Hard to tell which channels drive actual results?",
@@ -97,10 +103,10 @@ const FeatureCard = React.memo(
         y: -5,
         transition: { duration: 0.2 },
       }}
-      className="w-full md:w-1/3"
+      className="w-full"
     >
       <Card
-        className={`border-t-4 ${card.color} flex flex-col justify-between hover:shadow-lg transition-shadow duration-200 h-full bg-white`}
+        className={`  border-t-4 ${card.color} flex flex-col justify-between hover:shadow-lg transition-shadow duration-200 h-full bg-white`}
       >
         <CardHeader className="p-4 sm:p-6">
           <CardTitle className="text-xl sm:text-2xl font-bold">
@@ -136,7 +142,11 @@ const FeatureCard = React.memo(
               <Button
                 className={`w-fit ${card.color} group bg-white border-2 hover:bg-current text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3`}
               >
-                <span className="group-hover:text-white">Get {card.title}</span>
+                <span className="group-hover:text-white">
+                  {card.stage === "coming-soon"
+                    ? "Coming Soon"
+                    : `Get ${card.title}`}
+                </span>
               </Button>
             </motion.div>
           </Link>
@@ -175,7 +185,10 @@ function Coming() {
       </motion.p>
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-3 sm:gap-4">
         {FEATURE_CARDS.map((card, index) => (
-          <div key={card.title} className={`${index === 0 ? 'lg:col-span-2' : ''}`}>
+          <div
+            key={card.title}
+            className={`${index === 0 ? "lg:col-span-2" : ""}`}
+          >
             <FeatureCard card={card} index={index} />
           </div>
         ))}

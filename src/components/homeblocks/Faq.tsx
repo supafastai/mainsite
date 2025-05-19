@@ -37,6 +37,11 @@ const domainInsights: DomainInsight[] = [
     insight:
       "Not at all.  We only track what's already public—ads, emails, posts, site changes. It's like reading the room… just digitally. Nothing shady—just smart.",
   },
+  {
+    title: "What kind of edge does SupaFast actually give me?",
+    insight:
+      "SupaFast shows you competitor moves as they happen—so you're not reacting late. You're responding fast, or even beating them to it. That's how you stay relevant and ahead.",
+  },
 ];
 
 const DomainAwareness = () => {

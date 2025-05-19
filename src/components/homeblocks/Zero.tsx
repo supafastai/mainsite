@@ -20,6 +20,7 @@ function Zero() {
           {[
             {
               step: "1",
+              color: "border-red-500 text-red-500",
               title: "Plug In Your Domain",
               description:
                 "Drop your domain into SupaFast dashboard and let the system do the rest. No setup headaches. No long forms.",
@@ -27,6 +28,7 @@ function Zero() {
             },
             {
               step: "2",
+              color: "border-blue-500 text-blue-500",
               title: "Let AI Do the Dirty Work",
               description:
                 "SupaFast identifies your key competitors, monitors their every move—ads, emails, site updates, product drops—and turns it all into clear, usable insights.",
@@ -34,6 +36,7 @@ function Zero() {
             },
             {
               step: "3",
+              color: "border-green-500 text-green-500",
               title: "Take Action Instantly",
               description:
                 "Use insights to counter, improve and stay ahead every day.",
@@ -48,18 +51,18 @@ function Zero() {
               transition={{ duration: 0.5, delay: item.delay }}
             >
               <Card className="h-full bg-white hover:shadow-lg transition-shadow duration-200">
-                <CardContent className="p-4 sm:p-5 md:p-6">
-                  <div className="flex flex-col items-center text-center">
+                <CardContent className="px-3 sm:px-5 md:px-6">
+                  <div className="flex flex-col gap-1 items-start  text-left">
                     <motion.div
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: item.delay + 0.2 }}
-                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-2 border-red-500 text-red-500 flex items-center justify-center text-lg sm:text-xl font-bold mb-3 sm:mb-4"
+                      className={`w-6 h-6 p-1 rounded-full bg-white border-2 ${item.color} flex items-center justify-center text-lg sm:text-xl font-bold `}
                     >
                       {item.step}
                     </motion.div>
-                    <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">
+                    <h3 className="text-base sm:text-lg font-bold ">
                       {item.title}
                     </h3>
                     <p className="text-sm sm:text-base text-gray-600">

@@ -74,18 +74,18 @@ function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
+            {/* <NavigationMenuItem>
               <NavigationMenuLink
                 className=" hover:bg-primary/10 hover:text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300"
                 href="/roadmap"
               >
                 Roadmap
               </NavigationMenuLink>
-            </NavigationMenuItem>
+            </NavigationMenuItem> */}
             <NavigationMenuItem>
               <NavigationMenuLink
                 className=" hover:bg-accent/10 hover:text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300"
-                href="#faq"
+                href="/#faq"
               >
                 FAQ
               </NavigationMenuLink>
@@ -127,15 +127,15 @@ function Header() {
             >
               Websites
             </Link>
-            <Link
+            {/* <Link
               href="/roadmap"
               onClick={() => setMobileMenuOpen(false)}
               className="hover:text-primary transition-colors"
             >
               Roadmap
-            </Link>
+            </Link> */}
             <Link
-              href="#faq"
+              href="/#faq"
               onClick={() => setMobileMenuOpen(false)}
               className="hover:text-primary transition-colors"
             >
