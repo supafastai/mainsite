@@ -108,7 +108,7 @@ const FeatureCard = React.memo(
       className="w-full"
     >
       <Card
-        className={`border-t-4 ${card.color} flex flex-col lg:flex-row justify-between hover:shadow-lg transition-shadow duration-200 h-full bg-white`}
+        className={`border-t-4  flex flex-col lg:flex-row justify-between hover:shadow-lg transition-shadow duration-200 h-full bg-white`}
       >
         <div className="flex flex-col flex-1 lg:w-1/2">
           <CardHeader className="p-4 sm:p-6">
@@ -146,7 +146,7 @@ const FeatureCard = React.memo(
                 whileTap={{ scale: 0.95 }}
               >
                 <Button
-                  className={`w-fit ${card.color} group bg-white border-2 hover:bg-current text-base sm:text-lg md:text-xl px-4 sm:px-6 py-2 sm:py-3`}
+                  className={`w-fit text-black group bg-white border-2 hover:bg-current text-base sm:text-lg md:text-xl px-4 sm:px-6 py-2 sm:py-3`}
                 >
                   <span className="group-hover:text-white">
                     {card.stage === "coming-soon"

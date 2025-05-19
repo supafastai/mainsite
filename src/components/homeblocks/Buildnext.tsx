@@ -69,7 +69,7 @@ function BusinessPriorities() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             type="submit"
-            className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium"
+            className="px-6 py-3  text-white rounded-lg bg-gradient-to-r from-secondary to-primary transition-colors font-medium"
           >
             Add Priority
           </motion.button>

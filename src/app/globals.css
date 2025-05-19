@@ -73,7 +73,7 @@
   --secondary-foreground: var(--neutral-white);
   --muted: var(--imperial-red-light);
   --muted-foreground: var(--imperial-red-dark);
-  --accent: var(--triadic-blue);
+  --accent: var(--color-white);
   --accent-foreground: var(--neutral-white);
   --destructive: var(--imperial-red-dark);
   --border: var(--neutral-light);

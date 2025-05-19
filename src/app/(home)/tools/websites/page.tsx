@@ -6,7 +6,7 @@ import Features from "@/components/productblocks/Features";
 import { FiFileText, FiTablet, FiGlobe } from "react-icons/fi"; // Feather icons
 import HowItWorks from "@/components/productblocks/HowItWorks";
 import ClosingSection from "@/components/productblocks/ClosingSection";
-
+import CTA from "@/components/homeblocks/CTA";
 function WebsiteProductPage() {
   const heroData = {
     headline: "Uncover Messaging. Spot Intent.",
@@ -75,6 +75,7 @@ function WebsiteProductPage() {
         subtitle="You've got the insight. What's your next move?"
         bulletPoints={bulletPoints}
       />
+      <CTA />
     </div>
   );
 }
