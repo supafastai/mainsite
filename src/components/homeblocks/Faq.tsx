@@ -51,7 +51,7 @@ const DomainAwareness = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
-      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-background/80 backdrop-blur-sm"
+      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-background/80 backdrop-blur-sm mx-auto"
     >
       <div className="container px-4">
         <motion.h2
@@ -69,7 +69,7 @@ const DomainAwareness = () => {
             <Accordion
               type="single"
               collapsible
-              className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6"
+              className="w-full flex flex-col gap-4 sm:gap-6"
             >
               {domainInsights.map((item, index) => (
                 <motion.div

@@ -6,7 +6,7 @@ import Features from "@/components/productblocks/Features";
 import { FiMail, FiCpu, FiBell } from "react-icons/fi"; // Feather icons
 import HowItWorks from "@/components/productblocks/HowItWorks";
 import ClosingSection from "@/components/productblocks/ClosingSection";
-
+import CTA from "@/components/homeblocks/CTA";
 function EmailProductPage() {
   const heroData = {
     headline: "Stay Ahead of Every Campaign",
@@ -75,6 +75,7 @@ function EmailProductPage() {
         subtitle="You've got the insight. What's your next move?"
         bulletPoints={bulletPoints}
       />
+      <CTA />
     </div>
   );
 }

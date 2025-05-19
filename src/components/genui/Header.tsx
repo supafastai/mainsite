@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -20,7 +21,7 @@ import { FiTarget, FiMail, FiGlobe } from "react-icons/fi";
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const router = useRouter();
   return (
     <nav className="flex sticky top-0 z-50 bg-white/70 backdrop-blur-sm justify-between items-center p-4 ">
       <Link href="/" className="text-2xl font-bold z-10">
@@ -44,7 +45,7 @@ function Header() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent hover:bg-secondary/10 hover:text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300 data-[state=open]:bg-gray-100/10 data-[state=open]:text-black data-[state=open]:scale-[1.02] data-[state=open]:shadow-sm">
+              <NavigationMenuTrigger className="bg-transparent focus:bg-white/90 focus-within:bg-white/90 *:bg-white/90 hover:bg-white group-hover:bg-white hover:text-black focus:text-black focus-within:text-black text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300 data-[state=open]:bg-white  data-[state=open]:hover:bg-accent[data-state=open]:bg-white data-[state=open]:focus:bg-accent[data-state=open]:focus:bg-white data-[state=open]:text-black data-[state=open]:scale-[1.02] data-[state=open]:shadow-sm">
                 Tools
               </NavigationMenuTrigger>
               <NavigationMenuContent className="z-[100] bg-white/90 backdrop-blur-sm">
@@ -94,7 +95,12 @@ function Header() {
         </NavigationMenu>
       </div>
 
-      <Button className="hidden md:block">Join Waitlist</Button>
+      <Button
+        onClick={() => router.push("/signup")}
+        className="hidden md:block bg-gradient-to-r from-secondary to-primary"
+      >
+        Join Waitlist
+      </Button>
 
       {mobileMenuOpen && (
         <div className="fixed top-0 left-0 w-screen h-screen bg-white/85 backdrop-blur-sm z-[100] md:hidden flex flex-col items-center justify-center">
@@ -141,7 +147,10 @@ function Header() {
             >
               FAQ
             </Link>
-            <Button onClick={() => setMobileMenuOpen(false)} className="mt-4">
+            <Button
+              onClick={() => setMobileMenuOpen(false)}
+              className="mt-4 bg-gradient-to-r from-secondary to-primary"
+            >
               Join Waitlist
             </Button>
           </div>

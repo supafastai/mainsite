@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { FaThumbsUp, FaLightbulb } from "react-icons/fa";
+import { FaThumbsUp  } from "react-icons/fa";
 
 interface BusinessPriority {
   id: number;
@@ -45,7 +45,6 @@ function BusinessPriorities() {
       className="flex flex-col gap-4 w-full bg-white/90 backdrop-blur-sm p-4 md:p-8 items-start justify-between rounded-4xl my-6"
     >
       <div className="flex items-center gap-2 relative">
-        <FaLightbulb className="stroke-secondary text-2xl" />
         <h2 className="text-3xl font-bold">
           What matters most to your business right now?
         </h2>
@@ -70,7 +69,7 @@ function BusinessPriorities() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             type="submit"
-            className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium"
+            className="px-6 py-3  text-white rounded-lg bg-gradient-to-r from-secondary to-primary transition-colors font-medium"
           >
             Add Priority
           </motion.button>

@@ -52,7 +52,7 @@ function ProductHero({ data }: ProductHeroProps) {
           >
             <a
               href={ctaLink}
-              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200 group"
+              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-secondary to-primary rounded-lg  transition-colors duration-200 group"
             >
               {ctaText}
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />

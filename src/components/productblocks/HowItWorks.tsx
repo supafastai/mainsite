@@ -65,8 +65,8 @@ function HowItWorks({ title = "How It Works", steps }: HowItWorksProps) {
               }`}
             >
               {/* Step number circle - added z-index */}
-              <div className="w-16 h-16 rounded-full bg-white border-4 border-blue-600 flex items-center justify-center z-10 mb-4 md:mb-0">
-                <span className="text-2xl font-bold text-blue-600">
+              <div className="w-16 h-16 rounded-full bg-white border-4 border-blue-50 flex items-center justify-center z-10 mb-4 md:mb-0">
+                <span className="text-2xl font-bold text-black">
                   {step.number}
                 </span>
               </div>
