@@ -13,19 +13,29 @@ interface DomainInsight {
 
 const domainInsights: DomainInsight[] = [
   {
-    title: "The Future of Fast Development",
+    title: "When is SupaFast Launching?",
     insight:
-      "Traditional development cycles are slow and expensive. SupaFast is revolutionizing this space by enabling rapid prototyping and deployment, helping teams move from idea to production in days, not months.",
+      "We're almost live. SupaFast is currently onboarding early access users — sign up to skip the queue and move faster than competitors waiting on the sidelines",
   },
   {
-    title: "Why Speed Matters",
+    title: "Why does competitor tracking even matter?",
     insight:
-      "In today's competitive landscape, development speed directly impacts market success. Teams using SupaFast can iterate faster, respond to market changes quicker, and maintain a significant competitive advantage.",
+      "Because guessing is expensive.  If you don't know what your competitors are doing, you're making decisions in the dark. SupaFast helps you see what's working for them—so you can do it better or avoid their mistakes altogether.",
   },
   {
-    title: "The Power of Early Access",
+    title: "Can't I just do this manually?",
     insight:
-      "Early adopters of SupaFast gain exclusive access to cutting-edge features, direct influence on product development, and the opportunity to shape the future of rapid development tools.",
+      "You could—if you love spreadsheets and stress.  Manually checking ads, websites, and emails takes hours. SupaFast does it for you, all in one place, so you can spend your time on the highest impact initiatives.",
+  },
+  {
+    title: "How does SupaFast help me make better decisions?",
+    insight:
+      "It gives you the “why” behind what's happening.  SupaFast shows you trends, patterns, and moves your competitors are making—so you can launch smarter, price better, or spot gaps before they do.",
+  },
+  {
+    title: "Isn't this just spying on the competition?",
+    insight:
+      "Not at all.  We only track what's already public—ads, emails, posts, site changes. It's like reading the room… just digitally. Nothing shady—just smart.",
   },
 ];
 
@@ -36,25 +46,25 @@ const DomainAwareness = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
-      className="py-24 bg-gradient-to-b from-background to-background/80 backdrop-blur-sm"
+      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-background/80 backdrop-blur-sm"
     >
-      <div className="container  px-4">
+      <div className="container px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-5xl font-bold text-center mb-16 text-foreground"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16 text-foreground"
         >
-          Understanding the Landscape
+          Frequently Asked Questions
         </motion.h2>
 
         <div className="max-w-7xl mx-auto">
-          <div className="">
+          <div>
             <Accordion
               type="single"
               collapsible
-              className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6"
+              className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6"
             >
               {domainInsights.map((item, index) => (
                 <motion.div
@@ -66,15 +76,15 @@ const DomainAwareness = () => {
                 >
                   <AccordionItem
                     value={`item-${index}`}
-                    className="border border-border rounded-xl px-6 py-2 bg-background/50 backdrop-blur-sm hover:bg-accent/5 transition-colors"
+                    className="border border-border rounded-lg sm:rounded-xl px-4 sm:px-6 py-2 bg-background/50 backdrop-blur-sm hover:bg-accent/5 transition-colors"
                   >
-                    <AccordionTrigger className="text-xl font-semibold hover:no-underline group">
+                    <AccordionTrigger className="text-lg sm:text-xl font-semibold hover:no-underline group">
                       <div className="flex flex-col w-full">
                         <span>{item.title}</span>
                         <div className="h-0.5 w-0 bg-gradient-to-r from-[--imperial-red-primary] via-[--ut-orange-primary] to-[--triadic-blue] transition-all duration-300 group-hover:w-full group-data-[state=open]:w-full" />
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="text-lg text-muted-foreground pt-2">
+                    <AccordionContent className="text-base sm:text-lg text-muted-foreground pt-2">
                       {item.insight}
                     </AccordionContent>
                   </AccordionItem>
