@@ -16,7 +16,7 @@ const NavlistItem = forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all bg-white border border-blue-200 text-black hover:text-black hover:bg-blue-50 hover:border-blue-300 hover:shadow-sm hover:scale-[1.02] focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all bg-white border hover:bg-white/90 border-blue-200 text-black hover:text-black  hover:shadow-sm hover:scale-[1.02] focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}

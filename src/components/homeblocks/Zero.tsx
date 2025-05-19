@@ -4,14 +4,14 @@ import { Card, CardContent } from "@/components/ui/card";
 
 function Zero() {
   return (
-    <section className="w-full py-8 sm:py-12 md:py-16 px-4 md:px-8 bg-gray-50">
+    <section className="w-full py-8 sm:py-12 md:py-16 px-4 md:px-8 ">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12"
+          className="text-2xl sm:text-3xl md:text-7xl font-bold text-center mb-8 sm:mb-12"
         >
           3 Steps. Zero Guesswork.
         </motion.h2>
@@ -52,20 +52,20 @@ function Zero() {
             >
               <Card className="h-full bg-white hover:shadow-lg transition-shadow duration-200">
                 <CardContent className="px-3 sm:px-5 md:px-6">
-                  <div className="flex flex-col gap-1 items-start  text-left">
+                  <div className="flex flex-col gap-1 items-start text-left">
                     <motion.div
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: item.delay + 0.2 }}
-                      className={`w-6 h-6 p-1 rounded-full bg-white border-2 ${item.color} flex items-center justify-center text-lg sm:text-xl font-bold `}
+                      className={`w-8 h-8 p-1 rounded-full bg-white border-2 ${item.color} flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold`}
                     >
                       {item.step}
                     </motion.div>
-                    <h3 className="text-base sm:text-lg font-bold ">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
                       {item.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600">
+                    <p className="text-sm sm:text-base md:text-lg text-gray-600">
                       {item.description}
                     </p>
                   </div>
