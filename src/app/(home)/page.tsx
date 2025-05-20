@@ -30,7 +30,7 @@ export default function Home() {
             className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-bold leading-tight"
           >
             Your Competitors Are Moving Fast. <br className="hidden sm:block" />
-            You? You&apos;re moving SupaFast
+            Stay ahead of every move with SupaFast.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

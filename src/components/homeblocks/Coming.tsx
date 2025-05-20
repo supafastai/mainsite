@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 // Extract card data to a constant outside the component
 const FEATURE_CARDS = [
@@ -33,8 +34,8 @@ const FEATURE_CARDS = [
     title: "SupaFast Ads",
     description: "See their ads before your customers do",
     color: "border-blue-500 text-blue-500",
-    href: "/tools/ads",
-    stage: "active",
+    href: "/",
+    stage: "coming-soon",
     painPoints: [
       "Competitors running ads you don't know about?",
       "Missing their targeting strategies?",
@@ -48,8 +49,8 @@ const FEATURE_CARDS = [
     title: "SupaFast Insite",
     description: "Never miss a website change again",
     color: "border-secondary text-secondary",
-    href: "/tools/websites",
-    stage: "active",
+    href: "/",
+    stage: "coming-soon",
     painPoints: [
       "Competitors changing prices without you knowing?",
       "Missing their new product launches?",
@@ -166,10 +167,11 @@ const FeatureCard = React.memo(
             className="w-full lg:w-1/2 p-4 sm:p-6"
           >
             <div className="relative w-full h-[200px] sm:h-[300px] lg:h-full rounded-lg overflow-hidden">
-              <img
+              <Image
                 src={card.image}
                 alt={`${card.title} dashboard preview`}
                 className="object-cover w-full h-full"
+                fill
               />
             </div>
           </motion.div>
