@@ -109,7 +109,7 @@ const FeatureCard = React.memo(
       className="w-full"
     >
       <Card
-        className={`border-t-4  flex flex-col lg:flex-row justify-between hover:shadow-lg transition-shadow duration-200 h-full bg-white`}
+        className={` border-0 hover:shadow shadow-none flex flex-col lg:flex-row justify-between  h-full bg-white`}
       >
         <div className="flex flex-col flex-1 lg:w-1/2">
           <CardHeader className="p-4 sm:p-6">
@@ -190,7 +190,7 @@ function Coming() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col gap-3 sm:gap-4 w-full bg-white/90 backdrop-blur-sm p-3 sm:p-4 md:p-8 items-start justify-between rounded-2xl sm:rounded-4xl my-4 sm:my-6"
+      className="flex flex-col gap-3 sm:gap-4 w-full bg-white/90 backdrop-blur-sm p-4 md:p-8 items-start justify-between rounded-2xl sm:rounded-4xl my-4 sm:my-6"
     >
       <motion.h2
         initial={{ opacity: 0, x: -20 }}

@@ -43,12 +43,12 @@ function Perfect() {
   ];
 
   return (
-    <section className="py-24 px-8 max-w-7xl mx-auto">
+    <section className="py-24 px-4 sm:p-4 md:p-8 ">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-8 md:mb-16 bg-gradient-to-r from-black to-black bg-clip-text text-transparent"
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-left mb-8 md:mb-16 bg-gradient-to-r from-black to-black bg-clip-text text-transparent"
       >
         Perfect For
       </motion.h2>
@@ -63,15 +63,19 @@ function Perfect() {
           <motion.div
             key={index}
             variants={cardVariants}
-            className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20"
+            className="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-6 md:p-8 backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20"
           >
-            {card.icon}
-            <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-black">
-              {card.title}
-            </h3>
-            <p className="text-sm md:text-base leading-relaxed text-black/80">
-              {card.text}
-            </p>
+            <div className="flex flex-col sm:flex-row md:flex-col items-start gap-3 sm:gap-4 md:gap-0">
+              <div className="sm:mt-1 md:mb-4">{card.icon}</div>
+              <div>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 sm:mb-3 md:mb-4 text-black">
+                  {card.title}
+                </h3>
+                <p className="text-base sm:text-lg leading-relaxed text-black/80">
+                  {card.text}
+                </p>
+              </div>
+            </div>
           </motion.div>
         ))}
       </motion.div>
