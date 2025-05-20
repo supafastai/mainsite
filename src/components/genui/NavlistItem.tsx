@@ -23,11 +23,11 @@ const NavlistItem = forwardRef<
         >
           <div className="flex items-center gap-2">
             {icon && <div className="flex-shrink-0">{icon}</div>}
-            <div className="text-sm font-medium leading-none">
+            <div className="text-lg font-medium leading-none">
               <h1>{title}</h1>
             </div>
           </div>
-          <p className="line-clamp-2 text-sm leading-snug text-gray-600">
+          <p className="line-clamp-2 text-base leading-snug text-gray-600">
             {children}
           </p>
         </a>

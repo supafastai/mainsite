@@ -15,7 +15,7 @@ import Image from "next/image";
 // Extract card data to a constant outside the component
 const FEATURE_CARDS = [
   {
-    title: "SupaFast Email",
+    title: "Email",
     description: "Never miss a competitor's email campaign again",
     color: "border-primary text-primary",
     href: "/tools/emails",
@@ -31,7 +31,7 @@ const FEATURE_CARDS = [
       "Get instant alerts and AI-powered analysis of every competitor email, so you can respond before your customers do.",
   },
   {
-    title: "SupaFast Ads",
+    title: "Ads",
     description: "See their ads before your customers do",
     color: "border-blue-500 text-blue-500",
     href: "/",
@@ -46,7 +46,7 @@ const FEATURE_CARDS = [
       "Monitor their ad campaigns in real-time, understand their strategy, and respond before they steal your market share.",
   },
   {
-    title: "SupaFast Insite",
+    title: "Insite",
     description: "Never miss a website change again",
     color: "border-secondary text-secondary",
     href: "/",
@@ -61,7 +61,7 @@ const FEATURE_CARDS = [
       "Get instant notifications of every website change, from price updates to new products, so you can stay competitive.",
   },
   {
-    title: "SupaFast Social",
+    title: "Social",
     description: "Track your competitors' social moves in real-time",
     href: "/",
     color: "border-ring text-ring",
@@ -77,7 +77,7 @@ const FEATURE_CARDS = [
       "Get instant visibility into your competitors social strategy—from posts to performance—so you can benchmark, adapt, and lead with data-backed content decisions.",
   },
   {
-    title: "SupaFast DataSense",
+    title: "DataSense",
     description: "Understand what's really working in your business",
     href: "/",
     color: "border-green-500 text-green-500",
@@ -122,7 +122,7 @@ const FeatureCard = React.memo(
           </CardHeader>
           <CardContent className="p-4 sm:p-6">
             <div className="space-y-3 sm:space-y-4">
-              <ul className="list-[disc] list-inside space-y-1 sm:space-y-2 text-black [&>li]:marker:text-current">
+              {/* <ul className="list-[disc] list-inside space-y-1 sm:space-y-2 text-black [&>li]:marker:text-current">
                 {card.painPoints.map((point, i) => (
                   <motion.li
                     key={i}
@@ -134,7 +134,7 @@ const FeatureCard = React.memo(
                     {point}
                   </motion.li>
                 ))}
-              </ul>
+              </ul> */}
               <p className="text-sm sm:text-base md:text-lg font-medium text-gray-800 mt-3 sm:mt-4">
                 {card.solution}
               </p>
@@ -190,13 +190,13 @@ function Coming() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col gap-3 sm:gap-4 w-full bg-white/90 backdrop-blur-sm p-4 md:p-8 items-start justify-between rounded-2xl sm:rounded-4xl my-4 sm:my-6"
+      className="flex flex-col h-full gap-3 sm:gap-4 w-full bg-white/90 backdrop-blur-sm p-4 md:p-8 items-center justify-between rounded-2xl sm:rounded-4xl my-4 sm:my-6"
     >
       <motion.h2
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.2 }}
-        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold"
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center w-full"
       >
         Your SupaFast Advantage
       </motion.h2>
@@ -204,7 +204,7 @@ function Coming() {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.3 }}
-        className="text-lg sm:text-xl md:text-2xl"
+        className="text-lg sm:text-xl md:text-2xl text-center"
       >
         Don&apos;t let competitors outmaneuver you. Get real-time insights and
         stay ahead of the game.

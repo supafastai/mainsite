@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 
 function CTA() {
   return (
-    <section className="py-12 md:py-16 lg:py-20  ">
+    <section className="py-12 md:py-16 lg:py-20  h-screen flex flex-col items-center justify-center ">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8  ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-start gap-8"
+          className="flex flex-col items-center justify-center gap-8"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-left">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl w-full font-bold text-center">
             Ready to Get Started?
           </h2>
-          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-black/80 ">
+          <p className="text-xl w-full sm:text-2xl md:text-3xl lg:text-4xl text-black/80 text-center">
             Join thousands of users who are already transforming their workflow.
           </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

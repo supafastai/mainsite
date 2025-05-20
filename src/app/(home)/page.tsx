@@ -16,7 +16,7 @@ export default function Home() {
   const router = useRouter();
   return (
     <div className="">
-      <div className="z-0 flex flex-col  bg-white/90 backdrop-blur-sm p-4 md:p-8 items-center justify-between rounded-4xl w-full h-full gap-6 md:gap-10 group">
+      <div className="z-0 flex flex-col h-screen  bg-white/90 backdrop-blur-sm p-4 md:p-8 items-center justify-between rounded-4xl w-full  gap-6 md:gap-10 group">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
