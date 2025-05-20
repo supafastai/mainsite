@@ -51,7 +51,7 @@ const DomainAwareness = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
-      className=" px-4 sm:p-0  py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-background/80 backdrop-blur-sm"
+      className=" h-screen flex flex-col items-center justify-center px-4 sm:p-0  py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-background/80 backdrop-blur-sm"
     >
       <div className=" w-full flex flex-col items-start px-0 sm:p-4 md:p-8 ">
         <motion.h2
@@ -59,7 +59,7 @@ const DomainAwareness = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-12 md:mb-16 text-foreground"
+          className="text-center w-full text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-12 md:mb-16 text-foreground"
         >
           Frequently Asked Questions
         </motion.h2>

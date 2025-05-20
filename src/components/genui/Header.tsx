@@ -28,9 +28,9 @@ function Header() {
         <Image
           src="/logos/SupaFast-Full-Logo.png"
           alt="logo"
-          width={100}
-          height={100}
-          className="w-fit"
+          width={150}
+          height={150}
+          className="w-[100px] sm:w-[125px] md:w-[150px] h-auto"
         />
       </Link>
 
@@ -45,7 +45,7 @@ function Header() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent focus:bg-white/90 focus-within:bg-white/90 *:bg-white/90 hover:bg-white group-hover:bg-white hover:text-black focus:text-black focus-within:text-black text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300 data-[state=open]:bg-white  data-[state=open]:hover:bg-accent[data-state=open]:bg-white data-[state=open]:focus:bg-accent[data-state=open]:focus:bg-white data-[state=open]:text-black data-[state=open]:scale-[1.02] data-[state=open]:shadow-sm">
+              <NavigationMenuTrigger className="text-lg bg-transparent focus:bg-white/90 focus-within:bg-white/90 *:bg-white/90 hover:bg-white group-hover:bg-white hover:text-black focus:text-black focus-within:text-black text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300 data-[state=open]:bg-white  data-[state=open]:hover:bg-accent[data-state=open]:bg-white data-[state=open]:focus:bg-accent[data-state=open]:focus:bg-white data-[state=open]:text-black data-[state=open]:scale-[1.02] data-[state=open]:shadow-sm">
                 Tools
               </NavigationMenuTrigger>
               <NavigationMenuContent className="z-[100] bg-white/90 backdrop-blur-sm">
@@ -85,7 +85,7 @@ function Header() {
             </NavigationMenuItem> */}
             <NavigationMenuItem>
               <NavigationMenuLink
-                className=" hover:bg-accent/10 hover:text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300"
+                className=" text-lg font-medium hover:bg-accent/10 hover:text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300"
                 href="/#faq"
               >
                 FAQ
@@ -97,7 +97,7 @@ function Header() {
 
       <Button
         onClick={() => router.push("/signup")}
-        className="hidden md:block bg-gradient-to-r from-secondary to-primary"
+        className="hidden h-fit w-fit text-lg font-medium md:block bg-gradient-to-r from-secondary to-primary"
       >
         Join Waitlist
       </Button>
@@ -149,7 +149,7 @@ function Header() {
             </Link>
             <Button
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-4 bg-gradient-to-r from-secondary to-primary"
+              className="mt-4 h-fit w-fit text-lg font-medium  bg-gradient-to-r from-secondary to-primary"
             >
               Join Waitlist
             </Button>

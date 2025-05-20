@@ -42,15 +42,14 @@ function BusinessPriorities() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="flex flex-col gap-4 w-full bg-white/90 backdrop-blur-sm p-4 md:p-8 items-start justify-between rounded-4xl my-6"
+      className="flex flex-col h-screen items-center justify-center gap-4 w-full bg-white/90 backdrop-blur-sm p-4 md:p-8  rounded-4xl my-6"
     >
       <div className="flex items-center gap-2 relative">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-left">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center">
           What matters most to your business right now?
         </h2>
-        <div className="absolute -bottom-2 left-0 w-[30%] h-[2px] bg-red-500"></div>
       </div>
-      <p className="text-lg sm:text-xl md:text-2xl text-gray-800">
+      <p className="text-lg sm:text-xl md:text-2xl text-gray-800 text-center">
         Your priorities, your playbook. Tell us what moves matter most — and
         we&apos;ll put them at your fingertips.
       </p>
