@@ -33,8 +33,8 @@ const FEATURE_CARDS = [
     title: "SupaFast Ads",
     description: "See their ads before your customers do",
     color: "border-blue-500 text-blue-500",
-    href: "/tools/ads",
-    stage: "active",
+    href: "/",
+    stage: "coming-soon",
     painPoints: [
       "Competitors running ads you don't know about?",
       "Missing their targeting strategies?",
@@ -48,8 +48,8 @@ const FEATURE_CARDS = [
     title: "SupaFast Insite",
     description: "Never miss a website change again",
     color: "border-secondary text-secondary",
-    href: "/tools/websites",
-    stage: "active",
+    href: "/",
+    stage: "coming-soon",
     painPoints: [
       "Competitors changing prices without you knowing?",
       "Missing their new product launches?",
