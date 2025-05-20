@@ -51,20 +51,20 @@ const DomainAwareness = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
-      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-background/80 backdrop-blur-sm mx-auto"
+      className="  py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-background/80 backdrop-blur-sm"
     >
-      <div className="container px-4">
+      <div className=" w-full flex flex-col items-start px-0 sm:p-4 md:p-8 ">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16 text-foreground"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-12 md:mb-16 text-foreground"
         >
           Frequently Asked Questions
         </motion.h2>
 
-        <div className="max-w-7xl mx-auto">
+        <div className="w-full">
           <div>
             <Accordion
               type="single"

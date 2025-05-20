@@ -109,7 +109,7 @@ const FeatureCard = React.memo(
       className="w-full"
     >
       <Card
-        className={`border-t-4  flex flex-col lg:flex-row justify-between hover:shadow-lg transition-shadow duration-200 h-full bg-white`}
+        className={` border-0 hover:shadow shadow-none flex flex-col lg:flex-row justify-between  h-full bg-white`}
       >
         <div className="flex flex-col flex-1 lg:w-1/2">
           <CardHeader className="p-4 sm:p-6">
