@@ -21,7 +21,7 @@ export default function Home() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex w-full flex-col gap-4 md:gap-8 text-center items-center justify-center  px-2 md:px-4 lg:px-0"
+          className="flex w-full flex-col gap-4 md:gap-8 text-center items-center justify-center  px-0 md:px-4 lg:px-0"
         >
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
