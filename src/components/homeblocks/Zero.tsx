@@ -10,7 +10,7 @@ function Zero() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-8 sm:mb-12"
+        className="text-4xl sm:text-5xl font-bold text-center mb-8 sm:mb-12"
       >
         3 Steps. Zero Guesswork.
       </motion.h2>
@@ -61,10 +61,10 @@ function Zero() {
                   >
                     {item.step}
                   </motion.div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">
                     {item.title}
                   </h3>
-                  <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600">
+                  <p className="text-base sm:text-lg md:text-xl text-gray-600">
                     {item.description}
                   </p>
                 </div>

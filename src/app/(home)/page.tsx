@@ -36,7 +36,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-base sm:text-lg md:text-xl text-gray-700"
+            className="text-base sm:text-lg md:text-xl text-gray-800"
           >
             SupaFast puts competitor strategies right where they belong — in
             your hands.

@@ -59,7 +59,7 @@ const DomainAwareness = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-center w-full text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-12 md:mb-16 text-foreground"
+          className="text-center w-full text-4xl sm:text-5xl  font-bold mb-8 sm:mb-12 md:mb-16 text-foreground"
         >
           Frequently Asked Questions
         </motion.h2>
@@ -83,13 +83,13 @@ const DomainAwareness = () => {
                     value={`item-${index}`}
                     className="border border-border rounded-lg sm:rounded-xl px-4 sm:px-6 py-2 bg-background/50 backdrop-blur-sm hover:bg-accent/5 transition-colors"
                   >
-                    <AccordionTrigger className="text-lg sm:text-xl font-semibold hover:no-underline group">
+                    <AccordionTrigger className="text-base sm:text-lg md:text-xl font-semibold hover:no-underline group">
                       <div className="flex flex-col w-full">
                         <span>{item.title}</span>
                         <div className="h-0.5 w-0 bg-gradient-to-r from-[--imperial-red-primary] via-[--ut-orange-primary] to-[--triadic-blue] transition-all duration-300 group-hover:w-full group-data-[state=open]:w-full" />
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="text-base sm:text-lg text-muted-foreground pt-2">
+                    <AccordionContent className="text-sm sm:text-base  text-muted-foreground pt-2">
                       {item.insight}
                     </AccordionContent>
                   </AccordionItem>
