@@ -48,7 +48,7 @@ function Perfect() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-8 md:mb-16 bg-gradient-to-r from-black to-black bg-clip-text text-transparent"
+        className="text-4xl sm:text-5xl font-bold text-center mb-8 md:mb-16 bg-gradient-to-r from-black to-black bg-clip-text text-transparent"
       >
         Perfect For
       </motion.h2>
@@ -68,10 +68,10 @@ function Perfect() {
             <div className="flex flex-col sm:flex-row md:flex-col items-start gap-3 sm:gap-4 md:gap-0">
               <div className="sm:mt-1 md:mb-4">{card.icon}</div>
               <div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 sm:mb-3 md:mb-4 text-black">
+                <h3 className="text-2xl sm:text-3xl font-semibold mb-2 sm:mb-3 md:mb-4 text-black">
                   {card.title}
                 </h3>
-                <p className="text-base sm:text-lg leading-relaxed text-black/80">
+                <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-600">
                   {card.text}
                 </p>
               </div>

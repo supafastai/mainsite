@@ -45,11 +45,11 @@ function BusinessPriorities() {
       className="flex flex-col h-screen items-center justify-center gap-4 w-full bg-white/90 backdrop-blur-sm p-4 md:p-8  rounded-4xl my-6"
     >
       <div className="flex items-center gap-2 relative">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center">
           What matters most to your business right now?
         </h2>
       </div>
-      <p className="text-lg sm:text-xl md:text-2xl text-gray-800 text-center">
+      <p className="text-base sm:text-lg md:text-xl  text-gray-800 text-center">
         Your priorities, your playbook. Tell us what moves matter most — and
         we&apos;ll put them at your fingertips.
       </p>
@@ -90,7 +90,7 @@ function BusinessPriorities() {
                 className="flex items-center justify-between p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow"
               >
                 <div className="flex-1">
-                  <p className="text-lg sm:text-xl font-medium text-gray-800">
+                  <p className="text-base sm:text-lg md:text-xl font-medium text-gray-800">
                     {priority.text}
                   </p>
                   <p className="text-sm sm:text-base text-gray-500">

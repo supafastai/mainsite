@@ -113,32 +113,17 @@ const FeatureCard = React.memo(
       >
         <div className="flex flex-col flex-1 lg:w-1/2">
           <CardHeader className="p-4 sm:p-6">
-            <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold">
+            <CardTitle className="text-2xl sm:text-3xl  font-bold">
               {card.title}
             </CardTitle>
-            <CardDescription className="text-lg sm:text-xl md:text-2xl">
+            <CardDescription className="text-base sm:text-lg md:text-xl text-gray-800">
               {card.description}
             </CardDescription>
           </CardHeader>
-          <CardContent className="p-4 sm:p-6">
-            <div className="space-y-3 sm:space-y-4">
-              {/* <ul className="list-[disc] list-inside space-y-1 sm:space-y-2 text-black [&>li]:marker:text-current">
-                {card.painPoints.map((point, i) => (
-                  <motion.li
-                    key={i}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.6 + index * 0.1 + i * 0.1 }}
-                    className="text-base sm:text-lg md:text-xl text-gray-600"
-                  >
-                    {point}
-                  </motion.li>
-                ))}
-              </ul> */}
-              <p className="text-sm sm:text-base md:text-lg font-medium text-gray-800 mt-3 sm:mt-4">
-                {card.solution}
-              </p>
-            </div>
+          <CardContent className="px-4 sm:px-6">
+            <p className="text-base sm:text-lg md:text-xl font-medium text-gray-950 ">
+              {card.solution}
+            </p>
           </CardContent>
           <CardFooter className="p-4 sm:p-6">
             <Link href={card.href} aria-label={`Get ${card.title}`}>
@@ -196,7 +181,7 @@ function Coming() {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.2 }}
-        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center w-full"
+        className="text-4xl sm:text-5xl  font-bold text-center w-full"
       >
         Your SupaFast Advantage
       </motion.h2>
