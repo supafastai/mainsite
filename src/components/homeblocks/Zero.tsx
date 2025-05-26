@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 function Zero() {
   return (
-    <section className="w-full flex flex-col items-center justify-center h-screen py-8 sm:py-12 md:py-16 px-4 sm:p-4 md:p-8 ">
+    <section className="w-full flex flex-col items-center justify-center sm:h-screen py-8 sm:py-12 md:py-16 px-4 sm:p-4 md:p-8 ">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
