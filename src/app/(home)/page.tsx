@@ -3,11 +3,11 @@
 import { Button } from "@/components/ui/button";
 
 import { motion } from "motion/react";
-import Coming from "@/components/homeblocks/Coming";
 import Faq from "@/components/homeblocks/Faq";
 import Zero from "@/components/homeblocks/Zero";
-import Perfect from "@/components/homeblocks/Perfect";
-import Buildnext from "@/components/homeblocks/Buildnext";
+// import Coming from "@/components/homeblocks/Coming";
+// import Perfect from "@/components/homeblocks/Perfect";
+// import Buildnext from "@/components/homeblocks/Buildnext";
 import CTA from "@/components/homeblocks/CTA";
 
 import { useRouter } from "next/navigation";
@@ -52,7 +52,7 @@ export default function Home() {
               onClick={() => router.push("/signup")}
               className="mt-2 hover:scale-105 transition-transform text-lg sm:text-xl md:text-2xl font-semibold px-6 sm:px-8 md:px-10 py-6 md:py-8 bg-gradient-to-r from-secondary to-primary"
             >
-              Join waitlist
+              Get my Insights
             </Button>
             <p className="mt-4 text-sm sm:text-base font-lufga font-semibold text-gray-600 italic">
               Built by marketers + engineers behind $13M+ in ad spend
@@ -61,9 +61,9 @@ export default function Home() {
         </motion.div>
       </div>
       <Zero />
-      <Perfect />
+      {/* <Perfect />
       <Coming />
-      <Buildnext />
+      <Buildnext /> */}
       <Faq />
       <CTA />
     </div>
