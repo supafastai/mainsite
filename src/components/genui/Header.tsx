@@ -1,27 +1,36 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+// import {
+//   NavigationMenu,
+//   NavigationMenuContent,
+//   NavigationMenuItem,
+//   NavigationMenuLink,
+//   NavigationMenuList,
+//   NavigationMenuTrigger,
+// } from "@/components/ui/navigation-menu";
 import { Menu, X } from "lucide-react";
 
-import NavlistItem from "./NavlistItem";
-import { FiTarget, FiMail, FiGlobe } from "react-icons/fi";
+// import NavlistItem from "./NavlistItem";
+// import { FiTarget, FiMail, FiGlobe } from "react-icons/fi";
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const router = useRouter();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    setIsVisible(path !== "/signup" && path !== "/login");
+  }, []);
+
+  if (!isVisible) return null;
+
   return (
     <nav className="flex sticky top-0 z-50 bg-white/70 backdrop-blur-sm justify-between items-center p-4 ">
       <Link href="/" className="text-2xl font-bold z-10">
@@ -41,7 +50,7 @@ function Header() {
         {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
-      <div className="hidden md:flex items-center gap-4">
+      {/* <div className="hidden md:flex items-center gap-4">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -75,14 +84,14 @@ function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            {/* <NavigationMenuItem>
+            <NavigationMenuItem>
               <NavigationMenuLink
                 className=" hover:bg-primary/10 hover:text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300"
                 href="/roadmap"
               >
                 Roadmap
               </NavigationMenuLink>
-            </NavigationMenuItem> */}
+            </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
                 className=" text-lg font-medium hover:bg-accent/10 hover:text-black hover:scale-[1.02] hover:shadow-sm transition-all duration-300"
@@ -93,13 +102,13 @@ function Header() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-      </div>
+      </div> */}
 
       <Button
         onClick={() => router.push("/signup")}
         className="hidden h-fit w-fit text-lg font-medium md:block bg-gradient-to-r from-secondary to-primary"
       >
-        Join Waitlist
+        Get my Insights
       </Button>
 
       {mobileMenuOpen && (
@@ -112,7 +121,7 @@ function Header() {
             >
               <X className="h-6 w-6" />
             </button>
-            <Link
+            {/* <Link
               href="/tools/ads"
               onClick={() => setMobileMenuOpen(false)}
               className="hover:text-primary transition-colors"
@@ -132,7 +141,7 @@ function Header() {
               className="hover:text-primary transition-colors"
             >
               Websites
-            </Link>
+            </Link> */}
             {/* <Link
               href="/roadmap"
               onClick={() => setMobileMenuOpen(false)}
@@ -140,18 +149,18 @@ function Header() {
             >
               Roadmap
             </Link> */}
-            <Link
+            {/* <Link
               href="/#faq"
               onClick={() => setMobileMenuOpen(false)}
               className="hover:text-primary transition-colors"
             >
               FAQ
-            </Link>
+            </Link> */}
             <Button
               onClick={() => setMobileMenuOpen(false)}
               className="mt-4 h-fit w-fit text-lg font-medium  bg-gradient-to-r from-secondary to-primary"
             >
-              Join Waitlist
+              Get my Insights
             </Button>
           </div>
         </div>

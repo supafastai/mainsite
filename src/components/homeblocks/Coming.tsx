@@ -21,6 +21,7 @@ const FEATURE_CARDS = [
     href: "/tools/emails",
     stage: "active",
     image: "/siteimgs/email-dashboard.png",
+    switch: true,
     painPoints: [
       "Tired of discovering competitor campaigns too late?",
       "Struggling to keep up with their messaging?",
@@ -36,6 +37,8 @@ const FEATURE_CARDS = [
     color: "border-blue-500 text-blue-500",
     href: "/",
     stage: "coming-soon",
+    image: "/images/ads.png",
+    switch: false,
     painPoints: [
       "Competitors running ads you don't know about?",
       "Missing their targeting strategies?",
@@ -51,6 +54,9 @@ const FEATURE_CARDS = [
     color: "border-secondary text-secondary",
     href: "/",
     stage: "coming-soon",
+    image: "/images/1.png",
+    switch: false,
+
     painPoints: [
       "Competitors changing prices without you knowing?",
       "Missing their new product launches?",
@@ -66,7 +72,8 @@ const FEATURE_CARDS = [
     href: "/",
     color: "border-ring text-ring",
     stage: "coming-soon",
-
+    image: "/images/6.png",
+    switch: false,
     painPoints: [
       "Struggling to keep up with your competitors' viral posts?",
       "Missing their new ad creatives or campaign rollouts?",
@@ -82,6 +89,8 @@ const FEATURE_CARDS = [
     href: "/",
     color: "border-green-500 text-green-500",
     stage: "coming-soon",
+    image: "/images/2.png",
+    switch: false,
     painPoints: [
       "Drowning in metrics but can't find the story?",
       "Hard to tell which channels drive actual results?",
@@ -109,9 +118,11 @@ const FeatureCard = React.memo(
       className="w-full"
     >
       <Card
-        className={` border-0 hover:shadow shadow-none flex flex-col lg:flex-row justify-between  h-full bg-white`}
+        className={`border-0 hover:shadow shadow-none flex flex-col ${
+          card.switch ? "lg:flex-row" : "flex-col items-center"
+        } justify-between h-full bg-white`}
       >
-        <div className="flex flex-col flex-1 lg:w-1/2">
+        <div className="flex flex-col flex-1 w-full lg:min-w-1/2 ">
           <CardHeader className="p-4 sm:p-6">
             <CardTitle className="text-2xl sm:text-3xl  font-bold">
               {card.title}
@@ -144,21 +155,20 @@ const FeatureCard = React.memo(
             </Link>
           </CardFooter>
         </div>
-        {index === 0 && card.image && (
+        {card.image && (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8 }}
-            className="w-full lg:w-1/2 p-4 sm:p-6"
+            className="relative w-full "
           >
-            <div className="relative w-full h-[200px] sm:h-[300px] lg:h-full rounded-lg overflow-hidden">
-              <Image
-                src={card.image}
-                alt={`${card.title} dashboard preview`}
-                className="object-cover w-full h-full"
-                fill
-              />
-            </div>
+            <Image
+              src={card.image}
+              alt={`${card.title} dashboard preview`}
+              className=" w-full sm:max-w-[450px] h-fit mx-auto"
+              width={300}
+              height={300}
+            />
           </motion.div>
         )}
       </Card>

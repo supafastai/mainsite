@@ -111,7 +111,7 @@ export default function RootLayout({
     <html lang="en" className={`${lufga.variable}`}>
       <body className={` ${lufga.className} antialiased relative z-10`}>
         <Header />
-        <main className="flex flex-col items-center justify-center min-h-screen w-full px-4 sm:px-20 py-8 sm:py-32 ">
+        <main className="flex flex-col items-center justify-center w-full sm:w-10/12  lg:w-3/4 mx-auto px-4 sm:px-8 md:px-20 py-8 sm:py-16 md:py-32 ">
           {children}
         </main>
         <Footer />

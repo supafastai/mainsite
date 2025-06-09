@@ -1,71 +1,83 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-
-import { motion } from "motion/react";
-import Coming from "@/components/homeblocks/Coming";
-import Faq from "@/components/homeblocks/Faq";
-import Zero from "@/components/homeblocks/Zero";
-import Perfect from "@/components/homeblocks/Perfect";
-import Buildnext from "@/components/homeblocks/Buildnext";
+import React from "react";
+import ProductHero from "@/components/productblocks/ProductHero";
+import Features from "@/components/productblocks/Features";
+import { FiMail, FiCpu, FiBell } from "react-icons/fi"; // Feather icons
+import HowItWorks from "@/components/productblocks/HowItWorks";
+import ClosingSection from "@/components/productblocks/ClosingSection";
 import CTA from "@/components/homeblocks/CTA";
+function EmailProductPage() {
+  const heroData = {
+    headline: "Stay Ahead of Every Campaign",
+    subheadline:
+      "SupaFast Email monitors the competition's email marketing in real time. See what they're sending, when they're sending it, and why it matters — no guesswork, no cluttered inbox.",
+    ctaText: "Show Me The Emails",
+    ctaLink: "/signup",
+  };
 
-import { useRouter } from "next/navigation";
+  const features = [
+    {
+      title: "Real-time Inbox Spying",
+      description:
+        "See competitor emails the second they drop. No need to sign up yourself or check later.",
+      icon: <FiMail className="w-6 h-6" />, // or any other icon component
+    },
+    {
+      title: "AI-Powered Content Dissection",
+      description:
+        "We break down their offers, CTAs, designs, hooks and timing. You get strategy, not noise.",
+      icon: <FiCpu className="w-6 h-6" />,
+    },
+    {
+      title: "Smart Alerts",
+      description:
+        "Get pinged when competitors push discounts, launch products, or try sneaky moves",
+      icon: <FiBell className="w-6 h-6" />,
+    },
+  ];
 
-export default function Home() {
-  const router = useRouter();
+  const steps = [
+    {
+      number: 1,
+      title: "Tag Competitors",
+      description:
+        "Add the brands you want to keep an eye on. Big, small, or sneaky.",
+    },
+    {
+      number: 2,
+      title: "We Break It Down",
+      description:
+        "Subject lines, timing, call-to-actions — our AI slices it up.",
+    },
+    {
+      number: 3,
+      title: "You Get The Edge",
+      description: "You see the moves. You adjust your playbook. You win.",
+    },
+  ];
+
+  const bulletPoints = [
+    { text: "Spot discount trends before they hit your audience" },
+    { text: "Track when they launch, pause, or ramp up" },
+    { text: "Find high-performing subject lines to borrow (or beat)" },
+    { text: "Time your campaigns to land before theirs" },
+    { text: "Identify gaps in their messaging you can dominate" },
+    { text: "Avoid repeating their boring, bloated promos" },
+  ];
   return (
-    <div className="">
-      <div className="z-0 flex flex-col h-screen  bg-white/90 backdrop-blur-sm p-4 md:p-8 items-center justify-between rounded-4xl w-full  gap-6 md:gap-10 group">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex w-full flex-col gap-4 md:gap-8 text-center items-center justify-center  px-0 md:px-4 lg:px-0"
-        >
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-bold leading-tight"
-          >
-            Your Competitors Are Moving Fast. <br className="hidden sm:block" />
-            Stay ahead of every move with SupaFast.
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-base sm:text-lg md:text-xl text-gray-800"
-          >
-            SupaFast puts competitor strategies right where they belong — in
-            your hands.
-            <br className="hidden md:block" />
-            Join our waitlist to get early access
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            <Button
-              onClick={() => router.push("/signup")}
-              className="mt-2 hover:scale-105 transition-transform text-lg sm:text-xl md:text-2xl font-semibold px-6 sm:px-8 md:px-10 py-6 md:py-8 bg-gradient-to-r from-secondary to-primary"
-            >
-              Join waitlist
-            </Button>
-            <p className="mt-4 text-sm sm:text-base font-lufga font-semibold text-gray-600 italic">
-              Built by marketers + engineers behind $13M+ in ad spend
-            </p>
-          </motion.div>
-        </motion.div>
-      </div>{" "}
-      <Zero />
-      <Perfect />
-      <Coming />
-      <Buildnext />
-      <Faq />
+    <div className="bg-white flex flex-col gap-10">
+      <ProductHero data={heroData} />
+      <Features features={features} />
+      <HowItWorks steps={steps} />
+      <ClosingSection
+        title="Make It Count"
+        subtitle="You've got the insight. What's your next move?"
+        bulletPoints={bulletPoints}
+      />
       <CTA />
     </div>
   );
 }
+
+export default EmailProductPage;

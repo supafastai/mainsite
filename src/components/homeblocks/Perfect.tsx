@@ -43,7 +43,7 @@ function Perfect() {
   ];
 
   return (
-    <section className="py-24 h-screen flex flex-col items-center justify-center px-4 sm:p-4 md:p-8 ">
+    <section className="py-24 sm:h-screen flex flex-col items-center justify-center px-4 sm:p-4 md:p-8 ">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
