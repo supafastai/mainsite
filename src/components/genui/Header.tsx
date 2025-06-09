@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -21,7 +21,16 @@ import { Menu, X } from "lucide-react";
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const router = useRouter();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    setIsVisible(path !== "/signup" && path !== "/login");
+  }, []);
+
+  if (!isVisible) return null;
+
   return (
     <nav className="flex sticky top-0 z-50 bg-white/70 backdrop-blur-sm justify-between items-center p-4 ">
       <Link href="/" className="text-2xl font-bold z-10">

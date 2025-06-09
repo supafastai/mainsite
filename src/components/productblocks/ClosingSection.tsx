@@ -67,16 +67,16 @@ function ClosingSection({
                 scale: 1.02,
                 transition: { duration: 0.2 },
               }}
-              className="group flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer"
+              className="group flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm  transition-all duration-300 cursor-pointer"
             >
               <motion.div
-                className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300"
+                className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center  transition-colors duration-300"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.5 }}
               >
-                <FiCheck className="w-4 h-4 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                <FiCheck className="w-4 h-4 text-blue-600  transition-colors duration-300" />
               </motion.div>
-              <p className="text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
+              <p className="text-gray-700  transition-colors duration-300">
                 {point.text}
               </p>
             </motion.div>
