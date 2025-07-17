@@ -9,7 +9,7 @@ const termsHtml = `
 <p><strong>Last Updated:</strong> 7-4-2025</p>
 <p>Welcome to SupaFast AI! These Terms of Service (“Terms”) govern your access to and use of the SupaFast AI website, tools, and services (collectively, the “Service”).</p>
 <p>By accessing or using the Service, you agree to be bound by these Terms. If you do not agree, please do not use SupaFast AI.</p>
-<p>These Terms form a legally binding agreement between you (“you” or “User”) and Interstellar Collective Inc., doing business as SupaFast AI (“SupaFast,” “we,” “our,” or “us”).</p>
+<p>These Terms form a legally binding agreement between you (“you” or “User”) and The Interstellar Collective, LLC., doing business as SupaFast AI (“SupaFast,” “we,” “our,” or “us”).</p>
 <p>Please also review our <a href="https://supafastai.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://supafastai.com/contact" target="_blank" rel="noopener noreferrer">Contact Page</a> for additional information.</p>
 
 <h2><strong>1. Eligibility</strong></h2>
@@ -71,7 +71,7 @@ const termsHtml = `
 <p>We make no guarantees about availability, reliability, or performance. We disclaim all warranties, express or implied, including merchantability and fitness for a particular purpose.</p>
 
 <h2><strong>11. Limitation of Liability</strong></h2>
-<p>To the maximum extent permitted by law, SupaFast AI and Interstellar Collective Inc. shall not be liable for indirect, incidental, special, or consequential damages, including lost profits, data loss, or business interruption.</p>
+<p>To the maximum extent permitted by law, SupaFast AI and The Interstellar Collective, LLC. shall not be liable for indirect, incidental, special, or consequential damages, including lost profits, data loss, or business interruption.</p>
 <p>Our total liability will not exceed the amount paid by you for the Service in the twelve (12) months prior to the claim.</p>
 
 <h2><strong>12. Governing Law</strong></h2>

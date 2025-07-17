@@ -10,8 +10,8 @@ export default function ContactUsPage() {
         <p className="mb-4">We&apos;re here to help.</p>
         <p className="mb-6">
           Whether you have a question about your account, need support, or want
-          to learn more about SupaFast AI, feel free to reach out — we&apos;re happy
-          to assist.
+          to learn more about SupaFast AI, feel free to reach out — we&apos;re
+          happy to assist.
         </p>
 
         <h2 className="mt-8 mb-2 text-2xl font-bold">Email</h2>
@@ -26,12 +26,13 @@ export default function ContactUsPage() {
             info@supafastai.com
           </a>
         </p>
-        <p className="mb-6">We aim to respond within 1–2 business days.</p>
+        <p className="mb-6">We aim to respond within 1-2 business days.</p>
 
         <h2 className="mt-8 mb-2 text-2xl font-bold">Business Information</h2>
         <p className="mb-4">
-          SupaFast AI is a product owned and operated by Interstellar Collective
-          Inc., a registered company in the State of New Mexico, USA.
+          SupaFast AI is a product owned and operated by The Interstellar
+          Collective, LLC., a registered company in the State of New Mexico,
+          USA.
         </p>
         <p className="mb-6">
           Please note that we do not currently offer in-person support. All
