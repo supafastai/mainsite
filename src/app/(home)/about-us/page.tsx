@@ -11,9 +11,9 @@ export default function AboutUsPage() {
           Accelerate Your Vision.
         </p>
         <p className="mb-6">
-          SupaFast AI is a product owned and operated by Interstellar Collective
-          Inc., created to help fast-moving companies and startups execute at
-          the speed of ideas.
+          SupaFast AI is a product owned and operated by The Interstellar
+          Collective, LLC. Inc., created to help fast-moving companies and
+          startups execute at the speed of ideas.
         </p>
         <p className="mb-6">
           We build AI-powered automations, scrapers, workflows, and backend

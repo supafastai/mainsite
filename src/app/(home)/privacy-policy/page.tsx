@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
         </p>
         <p className="mt-6">
           Your privacy matters to us. This Privacy Policy explains how SupaFast
-          AI, a product owned and operated by Interstellar Collective Inc.
+          AI, a product owned and operated by The Interstellar Collective, LLC..
           (“SupaFast,” “we,” “us,” or “our”), collects, uses, and protects the
           personal information you provide when you visit or use our website and
           services.
